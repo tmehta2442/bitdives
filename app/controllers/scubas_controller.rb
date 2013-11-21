@@ -1,6 +1,7 @@
 class ScubasController < ApplicationController
 
    def index
+    # binding.pry
     @scuba = Scuba.new
     @scubas = Scuba.all
     @user = current_user
@@ -12,10 +13,14 @@ class ScubasController < ApplicationController
   end
 
   def show
+    @scubas = Scuba.all
+    @users = User.all
+    @user = current_user
+
   end
 
   def new
-    
+
   end
 
   def create
