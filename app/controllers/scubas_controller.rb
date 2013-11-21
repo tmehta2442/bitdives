@@ -15,6 +15,7 @@ class ScubasController < ApplicationController
   end
 
   def new
+    
   end
 
   def create

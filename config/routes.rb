@@ -1,6 +1,6 @@
 Bitdives::Application.routes.draw do
 
-  root to: "scubas#index"
+  root to: "scubas#new"
 
   resources :scubas
 
