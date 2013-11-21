@@ -8,21 +8,6 @@
 </head>
 
 
-<header>
-  <div id="header-content">
-      <% if current_user %>
-        <div id="signed_in">
-          <p>Welcome <strong><%= current_user.name %>!</strong></p>
-          <%= link_to "Sign Out", signout_path, id: "sign_out" %>
-        </div>
-      <% else %>
-        <ul id="link_list">
-        <li><a href="/auth/twitter" name="twitter_link" >Twitter</a></li>
-     <li><a href="/auth/facebook" name="fb_window" >Facebook</a></li>
-        </ul>
-      <% end %>
-  </div>
-</header>
 
 <body>
 
