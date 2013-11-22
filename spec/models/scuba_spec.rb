@@ -7,6 +7,7 @@ describe Scuba do
   						protectionBoots: 0, protectionVest: 1, comments: "none", user_id: 1)}
 
   it {should belong_to(:user)}
+  it {should validate_presence_of(:user_id)}
   it {should validate_presence_of(:dive_num)}
   it {should validate_presence_of(:date)}
   it {should validate_presence_of(:location)}
@@ -23,6 +24,6 @@ describe Scuba do
   it {should validate_presence_of(:protectionBoots)}
   it {should validate_presence_of(:protectionVest)}
   it {should validate_presence_of(:comments)}
-  it {should validate_presence_of(:user_id)}
+  
 
 end

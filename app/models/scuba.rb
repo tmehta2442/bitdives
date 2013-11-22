@@ -7,7 +7,7 @@ class Scuba < ActiveRecord::Base
 
   belongs_to :user
 
-  
+  validates :user_id, presence: true
   validates :dive_num, presence: true
   validates :date, presence: true
   validates :location, presence: true
@@ -24,6 +24,6 @@ class Scuba < ActiveRecord::Base
   validates :protectionBoots, presence: true
   validates :protectionVest, presence: true
   validates :comments, presence: true
-  validates :user_id, presence: true
+  
 
 end
