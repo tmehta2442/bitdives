@@ -11,20 +11,6 @@
 <div id="temperature"><%= x.text_field :temperature, placeholder:"Temperature" %><img src="/assets/red_qmark.png" ></img></div>
 <div id="visability"><%= x.text_field :visability, placeholder:"Visability" %><img src="/assets/red_qmark.png" ></img></div>
 <div id="environment"><%= x.text_field :environment, placeholder:"Environment" %><img src="/assets/red_qmark.png" ></img></div>
-<<<<<<< HEAD
-<div id="salt_fresh"><%= x.select :conditions, ['Salt','Fresh'] %><img src="/assets/red_qmark.png" ></img></div>
-<div id="boat_shore"><%= x.select :conditions, ['Boat','Shore'] %><img src="/assets/red_qmark.png" ></img></div>
-<div id="soft_wavy"><%= x.select :conditions, ['Soft','Wavy'] %><img src="/assets/red_qmark.png" ></img></div>
-<div id="hood">Hood: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
-<div id="gloves">Gloves: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
-<div id="boots">Boots: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
-<div id="vest">Vest: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
-</div>
-
-<div class="col-md-6">
-  <br>
-<div id="comments"><%= x.text_area :comments, placeholder:"Comments", rows:"10" %><img src="/assets/red_qmark.png" ></img></div>
-=======
 <div id="salt_fresh"><%= x.select :conditionsWater, ['Salt','Fresh'] %><img src="/assets/red_qmark.png" ></img></div>
 <div id="boat_shore"><%= x.select :conditionsDive, ['Boat','Shore'] %><img src="/assets/red_qmark.png" ></img></div>
 <div id="soft_wavy"><%= x.select :conditionsWaves, ['Soft','Wavy'] %><img src="/assets/red_qmark.png" ></img></div>
@@ -32,8 +18,11 @@
 <div id="gloves">Gloves: <%= x.check_box :protectionGloves %><img src="/assets/red_qmark.png" ></img></div>
 <div id="boots">Boots: <%= x.check_box :protectionBoots %><img src="/assets/red_qmark.png" ></img></div>
 <div id="vest">Vest: <%= x.check_box :protectionVest %><img src="/assets/red_qmark.png" ></img></div>
-<div id="comments"><%= x.text_area :comments, placeholder:"Comments" %><img src="/assets/red_qmark.png" ></img></div>
->>>>>>> 8bddbbae3019b72c688c0fb8fa5019d4e3077ba0
+</div>
+
+<div class="col-md-6">
+  <br>
+<div id="comments"><%= x.text_area :comments, placeholder:"Comments" , rows:"10" %><img src="/assets/red_qmark.png" ></img></div>
 <%= x.submit "Submit"%>
 <br>
 <% end %>
