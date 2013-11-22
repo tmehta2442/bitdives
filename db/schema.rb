@@ -22,12 +22,17 @@ ActiveRecord::Schema.define(:version => 20131121180727) do
     t.string   "temperature"
     t.string   "visability"
     t.string   "environment"
-    t.string   "conditions"
-    t.string   "protection"
+    t.string   "conditionsWater"
+    t.string   "conditionsDive"
+    t.string   "conditionsWaves"
+    t.string   "protectionHood"
+    t.string   "protectionGloves"
+    t.string   "protectionBoots"
+    t.string   "protectionVest"
     t.text     "comments"
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "users", :force => true do |t|
