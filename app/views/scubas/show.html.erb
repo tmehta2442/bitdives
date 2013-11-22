@@ -1,5 +1,4 @@
-current user =
-<%= @user.name %>
+<p>Drive #: <%= @user.name %></p>
 
 <% @user.scubas.each do |x| %>
 <div class="<%= x.id %>">
@@ -12,9 +11,26 @@ current user =
   <li><%= x.environment %></li>
   <li><%= x.comments %></li>
 	<%= link_to "delete", x, :method => "delete", :remote => true %>
+
+<script>
+  jQuery(function()
+  function codeAddress()
+  function initialize()
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<!-- input box -->
+
+    <div id="panel" > <!-- style="display: none;" -->
+      <input id="address" type="textbox" value="<%= x.location %>">
+      <input type="button" value="Geocode" onclick="codeAddress()" id="code";>
+    </div>
+<div id="googleMap" style="width:1000px;height:380px;"></div>
 </div>
-	<% end %>
+ <% end %>
 
-
+<br>
 	<p><a class="btn btn-primary btn-lg" role="button" href="/scubas">Make a New Entry</a></p>
 	<p><a class="btn btn-primary btn-lg" role="button" href="/signout">Signout</a></p>
+
+
+

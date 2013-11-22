@@ -11,3 +11,16 @@
  *= require_self
  *= require_tree .
  */
+
+ #entry_title {
+  color: #333;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+#map-canvas {
+        height: 80%;
+        margin: 0px;
+        padding: 0px
+      }

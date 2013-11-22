@@ -1,6 +1,9 @@
+<br>
+<div class="row">
+  <div class="col-md-6"><p> Form </p>
 <%= form_for @scuba do |x| %>
 <%= x.hidden_field :user_id, :value => current_user.id %>
-<div id="dive_num"><%= x.text_field :dive_num, placeholder:"Dive_Num" %><img src="/assets/red_qmark.png" ></img></div>
+<div id="dive_num" ><%= x.text_field :dive_num, placeholder:"Dive_Num" %><img src="/assets/red_qmark.png" ></img></div>
 <div id="date"><%= x.text_field :date, placeholder:"Date" %><img src="/assets/red_qmark.png" ></img></div>
 <div id="location"><%= x.text_field :location, placeholder:"Location" %><img src="/assets/red_qmark.png" ></img></div>
 <div id="time_in"><%= x.text_field :time_in, placeholder:"Time-In" %><img src="/assets/red_qmark.png" ></img></div>
@@ -15,8 +18,17 @@
 <div id="gloves">Gloves: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
 <div id="boots">Boots: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
 <div id="vest">Vest: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
-<div id="comments"><%= x.text_area :comments, placeholder:"Comments" %><img src="/assets/red_qmark.png" ></img></div>
+</div>
+
+<div class="col-md-6">
+  <br>
+<div id="comments"><%= x.text_area :comments, placeholder:"Comments", rows:"10" %><img src="/assets/red_qmark.png" ></img></div>
 <%= x.submit "Submit"%>
+<br>
 <% end %>
+<br>
 <p><a class="btn btn-primary btn-lg" role="button" href="/scubas/show">See your old dives</a></p>
+<br>
 <p><a class="btn btn-primary btn-lg" role="button" href="/signout">Signout</a></p>
+</div>
+</div>
