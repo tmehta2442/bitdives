@@ -1,19 +1,24 @@
 <header>
-  <div id="header-content">
+  <div class="jumbotron">
+  	<div class="container">
       <% if current_user %>
         <div id="signed_in">
           <p>Welcome <strong><%= current_user.name %>!</strong></p>
-          <%= link_to "Sign Out", signout_path, id: "sign_out" %>
+          <p><a class="btn btn-primary btn-lg" role="button" href="/signout">Signout</a></p>
           <p> Lets make a scuba log</p>
-          <a href="/scubas">Make a Log Entry</a>
+          <p><a class="btn btn-primary btn-lg" role="button" href="/scubas">Make a Log Entry</a></p>
+          <!-- <a href="/scubas">Make a Log Entry</a> -->
         </div>
       <% else %>
+      <div class="container">
       	Welcome to BitDive. Please sign in!
         <ul id="link_list">
         	<!-- twitter not up and running YET!! -->
-        <!-- <li><a href="/auth/twitter" name="twitter_link" >Twitter</a></li> -->
-     <li><a href="/auth/facebook" name="fb_window" >Facebook</a></li>
+        	<!-- <li><a href="/auth/twitter" name="twitter_link" >Twitter</a></li> -->
+        	<p><a class="btn btn-primary btn-lg" role="button" href="/auth/facebook">Facebook</a></p>
+     			<!-- <li><a href="/auth/facebook" name="fb_window" >Facebook</a></li> -->
         </ul>
       <% end %>
+  	</div>
   </div>
 </header>

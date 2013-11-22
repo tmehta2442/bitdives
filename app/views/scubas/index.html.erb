@@ -18,5 +18,5 @@
 <div id="comments"><%= x.text_area :comments, placeholder:"Comments" %><img src="/assets/red_qmark.png" ></img></div>
 <%= x.submit "Submit"%>
 <% end %>
-<a href="/scubas/show">See your old dives</a><br>
-<%= link_to "Sign Out", signout_path, id: "sign_out" %>
+<p><a class="btn btn-primary btn-lg" role="button" href="/scubas/show">See your old dives</a></p>
+<p><a class="btn btn-primary btn-lg" role="button" href="/signout">Signout</a></p>
