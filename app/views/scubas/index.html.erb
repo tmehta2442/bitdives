@@ -1,6 +1,6 @@
 <br>
 <div class="row">
-  <div class="col-md-6"><p> Form </p>
+  <div class="col-md-3"><p> Form </p>
 <%= form_for @scuba do |x| %>
 <%= x.hidden_field :user_id, :value => current_user.id %>
 <div id="dive_num" ><%= x.text_field :dive_num, placeholder:"Dive_Num" %><img src="/assets/red_qmark.png" ></img></div>
@@ -20,7 +20,7 @@
 <div id="vest">Vest: <%= x.check_box :protectionVest %><img src="/assets/red_qmark.png" ></img></div>
 </div>
 
-<div class="col-md-6">
+<div class="col-md-3">
   <br>
 <div id="comments"><%= x.text_area :comments, placeholder:"Comments" , rows:"10" %><img src="/assets/red_qmark.png" ></img></div>
 <%= x.submit "Submit"%>
