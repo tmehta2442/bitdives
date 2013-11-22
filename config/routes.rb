@@ -1,6 +1,7 @@
 Bitdives::Application.routes.draw do
 
   root to: "scubas#new"
+  get 'show' => 'scubas#show'
 
   resources :scubas
 

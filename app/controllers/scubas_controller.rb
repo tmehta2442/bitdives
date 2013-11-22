@@ -25,9 +25,7 @@ class ScubasController < ApplicationController
   def create
     @user = current_user
     @scuba = Scuba.create(params[:scuba])
-    respond_to do |format|
-      format.js
-    end
+    redirect_to '/show'
   end
 
   def edit
