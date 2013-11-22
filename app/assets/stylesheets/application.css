@@ -24,3 +24,25 @@
         margin: 0px;
         padding: 0px
       }
+
+      #video_background {
+position: absolute;
+bottom: 0px;
+right: 0px;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -1000;
+overflow: hidden;
+}
+
+video {
+   width:305px;
+   height:160px;
+   background:transparent url('parrots.jpg') no-repeat 0 0;
+   -webkit-background-size:cover;
+   -moz-background-size:cover;
+   -o-background-size:cover;
+   background-size:cover;
+}
