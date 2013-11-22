@@ -25,6 +25,7 @@ end
 group :development, :test do
 	gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 
 gem 'jquery-rails'

@@ -9,8 +9,13 @@ class CreateScubas < ActiveRecord::Migration
       t.string :temperature
       t.string :visability
       t.string :environment
-      t.string :conditions
-      t.string :protection
+      t.string :conditionsWater
+      t.string :conditionsDive
+      t.string :conditionsWaves
+      t.string :protectionHood  
+      t.string :protectionGloves
+      t.string :protectionBoots
+      t.string :protectionVest
       t.text :comments
       t.integer :user_id
 

@@ -1,100 +1,97 @@
-<header>
-  <div class="jumbotron">
-  	<div class="container">
-      <% if current_user %>
-        <div id="signed_in">
-          <p>Welcome <strong><%= current_user.name %>!</strong></p>
-          <p><a class="btn btn-primary btn-lg" role="button" href="/signout">Signout</a></p>
-          <p> Lets make a scuba log</p>
-          <p><a class="btn btn-primary btn-lg" role="button" href="/scubas">Make a Log Entry</a></p>
-          <!-- <a href="/scubas">Make a Log Entry</a> -->
+  <header>
+    <div class="jumbotron">
+    	<div class="container">
+        <% if current_user %>
+          <div id="signed_in">
+            <p>Welcome <strong><%= current_user.name %>!</strong></p>
+            <p><a class="btn btn-primary btn-lg" role="button" href="/signout">Signout</a></p>
+            <p> Lets make a scuba log</p>
+            <p><a class="btn btn-primary btn-lg" role="button" href="/scubas">Make a Log Entry</a></p>
+            <!-- <a href="/scubas">Make a Log Entry</a> -->
+          </div>
+        <% else %>
+        <div class="container">
+        	Welcome to BitDive. Please sign in!
+          <ul id="link_list">
+          	<!-- twitter not up and running YET!! -->
+          	<!-- <li><a href="/auth/twitter" name="twitter_link" >Twitter</a></li> -->
+          	<p><a class="btn btn-primary btn-lg" role="button" href="/auth/facebook">Facebook</a></p>
+       			<!-- <li><a href="/auth/facebook" name="fb_window" >Facebook</a></li> -->
+          </ul>
+        <% end %>
+    	</div>
+  </header>
+  <html lang="en">
+    <head>
+   
+
+      
+      <link href="assets/bootstrap.css" rel="stylesheet">
+      <style type="text/css">
+        body {
+          padding-top: 60px;
+          padding-bottom: 40px;
+        }
+      </style>
+      <link href="assets/bootstrap-responsive.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="this-carousel-id" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href="http://en.wikipedia.org/wiki/Hawksbill_sea_turtle">  <img src="assets/fish1sized.jpg" alt="Hawksbill Sea Turtle" />
+              </a>
+              <div class="carousel-caption">
+                <p>Hawksbill Sea Turtle</p>
+                <p><a href="http://en.wikipedia.org/wiki/Hawksbill_sea_turtle">Wikipedia &raquo;</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <a href="http://en.wikipedia.org/wiki/Picasso_trigger">
+                <img src="assets/fish2sized.jpg" alt="Picasso Trigger" />
+              </a>
+              <div class="carousel-caption">
+                <p>Picasso Trigger Fish</p>
+                <p><a href="http://en.wikipedia.org/wiki/Picasso_trigger">Wikipedia &raquo;</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <a href="http://www.liveaquaria.com/product/aquarium-fish-supplies.cfm?c=15+25">
+                <img src="assets/fish3sized.jpg" alt="Butterfly Fish" />
+              </a>
+              <div class="carousel-caption">
+                <p>Butterfly Fish</p>
+                <p><a href="http://www.liveaquaria.com/product/aquarium-fish-supplies.cfm?c=15+25">LiveAquaria &raquo;</a></p>
+              </div>
+            </div>
+            <div class="item">
+              <a href="https://github.com/tmehta2442/bitdives">
+                <img src="assets/fish4sized.jpg" alt="Scuba Diver" />
+              </a>
+              <div class="carousel-caption">
+                <p>Scuba Diver- TJ</p>
+                <p><a href="https://github.com/tmehta2442/bitdives">Made by Richard Yang & Tejas Mehta: check out our code @ GitHub &raquo;</a></p>
+              </div>
+            </div>
+          </div>
+            <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
         </div>
-      <% else %>
-      <div class="container">
-      	Welcome to BitDive. Please sign in!
-        <ul id="link_list">
-        	<!-- twitter not up and running YET!! -->
-        	<!-- <li><a href="/auth/twitter" name="twitter_link" >Twitter</a></li> -->
-        	<p><a class="btn btn-primary btn-lg" role="button" href="/auth/facebook">Facebook</a></p>
-     			<!-- <li><a href="/auth/facebook" name="fb_window" >Facebook</a></li> -->
-        </ul>
-      <% end %>
-  	</div>
-
-</header>
 
 
-<html lang="en">
-  <head>
- 
-
-    
-    <link href="assets/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="assets/bootstrap-responsive.css" rel="stylesheet">
-  </head>
-
-  <body>
-      <div id="this-carousel-id" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="item active">
-            <a href="http://hubblesite.org/gallery/album/entire/pr2006046a/xlarge_web/npp/128/">  <img src="assets/123sized.jpg" alt="Antennae Galaxies" />
-            </a>
-            <div class="carousel-caption">
-              <p>The Antennae Galaxies</p>
-              <p><a href="http://hubblesite.org/gallery/album/entire/pr2006046a/xlarge_web/npp/128/">Hubblesite.org &raquo;</a></p>
-            </div>
-          </div>
-          <div class="item">
-            <a href="http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/">
-              <img src="assets/123sized.jpg" alt="Carina Caterpillar" />
-            </a>
-            <div class="carousel-caption">
-              <p>Carina Nebula: The Caterpillar</p>
-              <p><a href="http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/">Hubblesite.org &raquo;</a></p>
-            </div>
-          </div>
-          <div class="item">
-            <a href="http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/">
-              <img src="assets/123sized.jpg" alt="Light Echo" />
-            </a>
-            <div class="carousel-caption">
-              <p>Light Echo From Star V838 Monocerotis</p>
-              <p><a href="http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/">Hubblesite.org &raquo;</a></p>
-            </div>
-          </div>
-          <div class="item">
-            <a href="http://hubblesite.org/gallery/album/entire/pr2006024a/xlarge_web/npp/128/">
-              <img src="assets/123sized.jpg" alt="Galaxy NGC5866" />
-            </a>
-            <div class="carousel-caption">
-              <p>Galaxy NGC 5866</p>
-              <p><a href="http://hubblesite.org/gallery/album/entire/pr2006024a/xlarge_web/npp/128/">Hubblesite.org &raquo;</a></p>
-            </div>
-          </div>
-        </div>
-          <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
-          <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
-      </div>
-
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/jquery-1.7.2.min.js"><\/script>')</script>
-    <!-- Bootstrap jQuery plugins compiled and minified -->
-    <script src="assets/bootstrap.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('.carousel').carousel({
-          interval: 3000
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="assets/jquery-1.7.2.min.js"><\/script>')</script>
+      <!-- Bootstrap jQuery plugins compiled and minified -->
+      <script src="assets/bootstrap.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('.carousel').carousel({
+            interval: 3000
+          });
         });
-      });
-    </script>
+      </script>
 
-  </body>
-</html>
+    </body>
+  </html>
 
