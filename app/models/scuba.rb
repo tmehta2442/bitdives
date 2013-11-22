@@ -7,7 +7,6 @@ class Scuba < ActiveRecord::Base
 
   belongs_to :user
 
-
   # validates :dive_num, presence: true
   # validates :date, presence: true
   # validates :location, presence: true
