@@ -20,7 +20,6 @@ class ScubasController < ApplicationController
   end
 
   def new
-
   end
 
   def create
@@ -32,6 +31,14 @@ class ScubasController < ApplicationController
   end
 
   def edit
+  end
+
+  def destroy
+    @scuba = Scuba.delete(params[:id])
+    @id = params[:id]
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update

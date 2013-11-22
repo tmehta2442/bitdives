@@ -16,7 +16,7 @@
 <div id="boots">Boots: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
 <div id="vest">Vest: <%= x.check_box :protection %><img src="/assets/red_qmark.png" ></img></div>
 <div id="comments"><%= x.text_area :comments, placeholder:"Comments" %><img src="/assets/red_qmark.png" ></img></div>
-<%= submit_tag %>
+<%= x.submit "Submit"%>
 <% end %>
 <a href="/scubas/show">See your old dives</a><br>
 <%= link_to "Sign Out", signout_path, id: "sign_out" %>
